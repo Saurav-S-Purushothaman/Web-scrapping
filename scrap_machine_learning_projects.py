@@ -12,7 +12,9 @@ import pandas as pd
 # prepare for easy opening new browser 
 driver_option = webdriver.ChromeOptions()
 driver_option.add_argument("--incognito") 
-chromedriver_path = "chrome_driver"
+
+# chrome driver path configured by default. So removing this.
+# chromedriver_path = "chrome_driver"
 
 def create_webdriver():
     driver = webdriver.Chrome(options=driver_option)
