@@ -22,9 +22,9 @@ def create_webdriver():
 browser = create_webdriver()
 browser.get("https://github.com/collections/machine-learning")
 
-# using this to persist the browser session to get the xpath 
-# input("Press any key to exit...")
-# browser.quit()
+#using this to persist the browser session to get the xpath 
+input("Press any key to exit...")
+browser.quit()
 
 projects = browser.find_elements(By.XPATH,"//h1[@class='h3 lh-condensed']")
 
