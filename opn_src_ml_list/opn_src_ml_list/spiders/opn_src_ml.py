@@ -14,6 +14,6 @@ class OpnSrcMLSpider(scrapy.Spider):
         prj_nms = all_article.xpath("//div/h1/a/@href").extract()
 
         for prj_nm,prj_url in zip(prj_nms,prj_urls):
-            item["prj_name"] = prj_nm
+            item["prj_name"] = prj_nm.replace("/"," ").strip()
             item["url"] = prj_url.url
             yield item
