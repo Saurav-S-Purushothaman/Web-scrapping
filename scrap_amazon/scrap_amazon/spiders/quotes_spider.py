@@ -27,3 +27,7 @@ class QuoteSpider(scrapy.Spider):
             items["tag"] = " ".join(tag)
             yield items
 
+        next_page = response.css("li.next a::attr(href)").get()
+        print(f"page : {next_page}")
+        if next_page is not None:
+            yield response.follow(next_page,callback=self.parse)

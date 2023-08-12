@@ -1,0 +1,22 @@
+[
+{"prj_name": "/apache/spark", "url": "https://github.com/apache/spark"},
+{"prj_name": "/apache/hadoop", "url": "https://github.com/apache/hadoop"},
+{"prj_name": "/jbhuang0604/awesome-computer-vision", "url": "https://github.com/jbhuang0604/awesome-computer-vision"},
+{"prj_name": "/GSA/data", "url": "https://github.com/GSA/data"},
+{"prj_name": "/GoogleTrends/data", "url": "https://github.com/GoogleTrends/data"},
+{"prj_name": "/nationalparkservice/data", "url": "https://github.com/nationalparkservice/data"},
+{"prj_name": "/fivethirtyeight/data", "url": "https://github.com/fivethirtyeight/data"},
+{"prj_name": "/beamandrew/medical-data", "url": "https://github.com/beamandrew/medical-data"},
+{"prj_name": "/src-d/awesome-machine-learning-on-source-code", "url": "https://github.com/src-d/awesome-machine-learning-on-source-code"},
+{"prj_name": "/igrigorik/decisiontree", "url": "https://github.com/igrigorik/decisiontree"},
+{"prj_name": "/keon/awesome-nlp", "url": "https://github.com/keon/awesome-nlp"},
+{"prj_name": "/openai/gym", "url": "https://github.com/openai/gym"},
+{"prj_name": "/aikorea/awesome-rl", "url": "https://github.com/aikorea/awesome-rl"},
+{"prj_name": "/umutisik/Eigentechno", "url": "https://github.com/umutisik/Eigentechno"},
+{"prj_name": "/jpmckinney/tf-idf-similarity", "url": "https://github.com/jpmckinney/tf-idf-similarity"},
+{"prj_name": "/scikit-learn-contrib/lightning", "url": "https://github.com/scikit-learn-contrib/lightning"},
+{"prj_name": "/gwding/draw_convnet", "url": "https://github.com/gwding/draw_convnet"},
+{"prj_name": "/scikit-learn/scikit-learn", "url": "https://github.com/scikit-learn/scikit-learn"},
+{"prj_name": "/tensorflow/tensorflow", "url": "https://github.com/tensorflow/tensorflow"},
+{"prj_name": "/activeloopai/deeplake", "url": "https://github.com/activeloopai/deeplake"}
+]
