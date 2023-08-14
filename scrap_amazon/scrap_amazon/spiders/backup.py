@@ -8,16 +8,6 @@ class QuoteSpider(scrapy.Spider):
     page_number = 2
 
     def parse(self, response: object, **kwargs: object) -> object:
-        """
-            Function to parse url, crawl using xpath/css
-            selector
-
-        Args:
-            response (scrapy.http.response.html.HtmlResponse): Response from url
-
-        Yields:
-            ScrapAmazonItem.item : output or result
-        """
         items = ScrapAmazonItem()
         all_div_tags = response.css("div.quote")
         for quote in all_div_tags:
