@@ -1,33 +1,17 @@
 import scrapy
 from ..items import ScrapAmazonItem
+from scrapy.http import FormRequest
 
 
 class QuoteSpider(scrapy.Spider):
     name = "quotes"  # name of the spider
-    start_urls = ["https://quotes.toscrape.com/"]
+    start_urls = ["https://quotes.toscrape.com/login"]
+    page_number = 2
 
     def parse(self, response: object, **kwargs: object) -> object:
-        """Function to parse url, crawl using xpath/css
-            selector
-
-        Args:
-            response (scrapy.http.response.html.HtmlResponse): Response from url
-
-        Yields:
-            ScrapAmazonItem.item : output or result
-        """
-        items = ScrapAmazonItem()
-        all_div_tags = response.css("div.quote")
-        for quote in all_div_tags:
-            title = quote.css("span.text::text").extract()
-            author = quote.css("span small.author::text").extract()
-            tag = quote.css(".tag::text").extract()
-            items["title"] = " ".join(title)
-            items["author"] = " ".join(author)
-            items["tag"] = " ".join(tag)
-            yield items
-
-        next_page = response.css("li.next a::attr(href)").get()
-        print(f"page : {next_page}")
-        if next_page is not None:
-            yield response.follow(next_page,callback=self.parse)
+        token = response.css("form input::attr(value)").extract_first()
+        return FormRequest.from_response(response=response,formdata= {
+            "csrf_token":token,
+            "username" : "myusername@example.com", 
+            "password" : "myrandompassword"
+        },callback=self.start_scraping)
