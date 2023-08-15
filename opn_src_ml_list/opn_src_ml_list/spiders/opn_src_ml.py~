@@ -31,3 +31,4 @@ class OpnSrcMLSpider(scrapy.Spider):
         if OpnSrcMLSpider.page_number < 3:
             OpnSrcMLSpider.page_number +=1
             yield scrapy.Request(url=next_page, callback=self.parse)
+
